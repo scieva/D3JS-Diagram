@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directed Chord Diagram</title>
+</head>
+<body>
+    <script src="indexJS.js"></script>
+    <div id="observablehq-chart-6077920f"></div>
+
+    <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@d3/directed-chord-diagram.js?v=3";
+
+        const runtime = new Runtime()
+        const module = runtime.module(define, name => {
+            if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-6077920f"));
+        });
+    </script>
+     
+    <p>Credit: <a href="https://observablehq.com/@d3/directed-chord-diagram">Directed Chord Diagram by D3</a></p>
+</body>
+</html>
