@@ -8,13 +8,14 @@
 </head>
 
 <body>
-    <div id="observablehq-chart-6077920f"></div>
+    <div id="observablehq-chart-6077920f" style="width: 50%; margin: auto;"></div>
 
     <script type="module">
         import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
         import define from "https://api.observablehq.com/@d3/directed-chord-diagram.js?v=3";
 
         const runtime = new Runtime()
+        
         const module = runtime.module(define, name => {
             if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-6077920f"));
         });
@@ -132,10 +133,7 @@ VNM,RUS,1`
         // console.log(newMatrix)
 
         module.redefine("matrix", newMatrix)
-
-        module.define()
-    </script>
-
+    </script>    
     <p>Credit: <a href="https://observablehq.com/@d3/directed-chord-diagram">Directed Chord Diagram by D3</a></p>
 </body>
 
